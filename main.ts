@@ -1,3 +1,4 @@
+// "The Roof": a grandfather, a blanket, and a sky that keeps opening above us.
 import { mkdirSync, writeFileSync } from "node:fs";
 
 const TEXT = [
