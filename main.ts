@@ -9,5 +9,10 @@ deeper the longer we looked,
 until the roof and the street
 were only a small warm place underneath it.`;
 
+const points = [...TEXT].length;
+if (points < 1 || points > 280) {
+  throw new Error(`entry is ${points} code points, must be 1-280`);
+}
+
 mkdirSync("/output", { recursive: true });
 writeFileSync("/output/entry.txt", TEXT, "utf8");
