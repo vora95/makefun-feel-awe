@@ -11,5 +11,10 @@ const TEXT = [
   "were only a small warm place underneath it.",
 ].join("\n");
 
+const points = [...TEXT].length;
+if (points < 1 || points > 280) {
+  throw new Error(`entry is ${points} code points, must be 1-280`);
+}
+
 mkdirSync("/output", { recursive: true });
 writeFileSync("/output/entry.txt", TEXT, "utf8");
